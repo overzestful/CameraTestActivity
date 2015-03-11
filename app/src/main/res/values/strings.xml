@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CameraScan</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_add">AddActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="add_button">Settings</string>
+    <string name="title_activity_viewall">ViewallActivity</string>
+    <string name="title_activity_view_calendar">ViewCalendar</string>
+    <string name="title_activity_SQL">SQLiteDatabaseActivity</string>
+
+
+    <string name="activity__name">ActivityName</string>
+    <string name="activity__staff">StaffName</string>
+    <string name="activity__password">Pass</string>
+    <string name="activity__confirm_password">ConPass</string>
+    <string name="activity__type">Type</string>
+
+    <string name="action_delete">Delete</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_add">Add</string>
+
+    <string name="alert_title">ลบกิจกรรมนี้?</string>
+    <string name="alert_message">คุณแน่ใจหรือไม่ที่จะลบกิจกรรมนี้</string>
+
+    <string name="add_data_title">Add this friend?</string>
+    <string name="add_data_message">Are you sure to add this friend?</string>
+    <string name="hello">Hello World, SQLiteDatabaseActivity!</string>
+</resources>

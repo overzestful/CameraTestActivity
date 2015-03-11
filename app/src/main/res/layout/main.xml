@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg" >
+
+    <ImageView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/logo"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addActivity"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/addactivity"
+        android:onClick="addAc"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewallactivity"
+        android:background="@drawable/viewactivity"
+        android:layout_below="@+id/viewCalendar"
+        android:layout_alignLeft="@+id/viewCalendar" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewCalendar"
+        android:background="@drawable/viewcarlendar"
+        android:layout_below="@+id/addActivity"
+        android:layout_alignLeft="@+id/addActivity" />
+
+    <!--
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addActivity"
+            android:background="@drawable/addactivity"
+            android:layout_below="@+id/imageView"
+            android:layout_alignLeft="@+id/viewallactivity"
+            android:layout_marginTop="43dp"
+            android:text="add_button"
+            android:onClick="addAc"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/viewallactivity"
+            android:background="@drawable/viewactivities"
+            android:focusable="false"
+            android:layout_below="@+id/addActivity"
+            android:layout_centerHorizontal="true"
+            android:onClick="viewall"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/viewCalendar"
+            android:background="@drawable/viewcalendar"
+            android:layout_below="@+id/viewallactivity"
+            android:layout_alignLeft="@+id/viewallactivity"
+            android:onClick="view_calendar"/>
+
+        <TextView
+            android:id="@+id/tv_footer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:textColor="#457778"
+            android:textSize="20dp"
+            android:fontFamily="Arial"
+            android:fadingEdge="horizontal"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:text="ยินดีต้อนรับเข้าสู่ Activity Recording System with QR Code"
+            android:layout_below="@+id/viewCalendar"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="77dp" />-->
+
+
+</RelativeLayout>

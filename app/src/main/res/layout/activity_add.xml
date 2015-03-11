@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="net.sourceforge.zbar.android.CameraTest.AddActivity"
+    android:background="@drawable/bg">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/logo" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_NameActivity"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignParentRight="true"
+        android:layout_alignLeft="@+id/button_submitAdd" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_Staff"
+        android:layout_below="@+id/editText_NameActivity"
+        android:layout_alignParentRight="true"
+        android:layout_alignLeft="@+id/editText_NameActivity" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editText_password"
+        android:layout_below="@+id/editText_Staff"
+        android:layout_alignRight="@+id/editText_Staff"
+        android:layout_alignLeft="@+id/editText_Staff" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editText_ConfirmPassword"
+        android:layout_below="@+id/editText_password"
+        android:layout_alignRight="@+id/editText_password"
+        android:layout_alignLeft="@+id/editText_password" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner_type"
+        android:layout_below="@+id/editText_ConfirmPassword"
+        android:layout_alignLeft="@+id/button_submitAdd" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_hour"
+        android:layout_below="@+id/spinner_type"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/imageView7" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView7"
+        android:layout_alignBottom="@+id/editText_hour"
+        android:layout_toLeftOf="@+id/spinner_type" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ยืนยัน"
+        android:id="@+id/button_submitAdd"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="mButtonOK"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView3"
+        android:background="@drawable/text_hour"
+        android:layout_alignTop="@+id/editText_hour"
+        android:layout_alignLeft="@+id/imageView8" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView4"
+        android:background="@drawable/text"
+        android:layout_alignTop="@+id/editText_NameActivity"
+        android:layout_alignLeft="@+id/imageView2" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView5"
+        android:background="@drawable/text_2"
+        android:layout_alignTop="@+id/editText_password"
+        android:layout_alignRight="@+id/imageView9" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView6"
+        android:background="@drawable/text_pass"
+        android:layout_below="@+id/editText_NameActivity"
+        android:layout_alignLeft="@+id/imageView4" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView8"
+        android:background="@drawable/text_confirmpassword"
+        android:layout_alignTop="@+id/editText_ConfirmPassword"
+        android:layout_alignLeft="@+id/imageView6" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView9"
+        android:background="@drawable/text_type_ac"
+        android:layout_below="@+id/editText_ConfirmPassword"
+        android:layout_alignRight="@+id/imageView3" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ย้อนกลับ"
+        android:id="@+id/button_back"
+        android:layout_alignTop="@+id/button_submitAdd"
+        android:layout_alignRight="@+id/imageView7"
+        android:onClick="back"/>
+
+
+</RelativeLayout>
