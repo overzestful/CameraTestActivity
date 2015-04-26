@@ -320,8 +320,8 @@ public class AddActivityWebserv extends Activity {
             txtHour.setText("");
             txtDateStart.setText("");
             txtTimeStart.setText("");
-            txtDateStart.setText("");
             txtDateEnd.setText("");
+            txtTimeEnd.setText("");
 
         }
 
