@@ -1,6 +1,7 @@
 package net.sourceforge.zbar.android.CameraTest;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -40,7 +41,8 @@ public class Main extends Activity {
         ImgButtonView = (ImageButton)findViewById(R.id.viewallactivity);
         ImgButtonCarlen = (ImageButton)findViewById(R.id.viewCalendar);
 
-	}
+
+    }
     private long lastBackPressTime = 0;
     @Override
     public void onBackPressed(){
@@ -86,7 +88,7 @@ public class Main extends Activity {
 
 
     public void addAc(View v) {
-        Intent intent = new Intent(Main.this, SQLiteDatabaseActivity.class);
+        Intent intent = new Intent(Main.this, AddActivityWebserv.class);
       //  setContentView(R.layout.main_book);
         startActivity(intent);
 

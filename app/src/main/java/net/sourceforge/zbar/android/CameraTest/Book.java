@@ -11,7 +11,7 @@ public class Book {
     private String confirm_password;
    // private String type;
     private String hour;
-    private String title;
+    //private String title;
 
 
     public long getId() {
@@ -64,8 +64,15 @@ public class Book {
         this.hour = hour;
     }
 
+    /*public String getTitle() {
+        return title;
+    }
+    public void setTitle(String title) {
+        this.title = title;
+    }*/
+
     @Override
     public String toString() {
-        return title;
+        return name;
     }
 }

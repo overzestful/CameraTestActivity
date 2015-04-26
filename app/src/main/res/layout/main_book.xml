@@ -3,27 +3,27 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    >
+    android:background="#b2000409">
 
     <LinearLayout
         android:id="@+id/group"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content">
 
         <Button
             android:id="@+id/buttonAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="เพิ่มกิจกรรมใหม่" />
+            android:background="@drawable/addnew_button" />
     </LinearLayout>
 
 
-
-             <ListView
-            android:id="@android:id/list"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Hello World, SQLiteDatabaseActivity!"></ListView>
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Hello World, SQLiteDatabaseActivity!"
+        android:background="#b2000409"></ListView>
 
 </LinearLayout>
 

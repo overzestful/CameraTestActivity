@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <CheckedTextView
         android:id="@+id/checkedTextView1"
@@ -16,7 +16,7 @@
         android:id="@+id/editText1"
         android:layout_width="match_parent"
         android:layout_height="74dp"
-        android:ems="10" >
+        android:ems="10">
 
         <requestFocus />
     </EditText>
@@ -32,41 +32,40 @@
         android:id="@+id/scanText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Scanning..." >
-    </TextView>
+        android:text="กำลังสแกน..."></TextView>
 
     <Button
         android:id="@+id/ScanButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="NewScan" />
+        android:text="สแกนใหม่" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal" >
+        android:gravity="center_horizontal">
 
         <Button
             android:id="@+id/button2"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SAVE" />
+            android:text="บันทึก" />
 
         <Button
             android:id="@+id/button1"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="VIEW" />
+            android:text="ดูข้อมูล" />
 
         <Button
             android:id="@+id/exit"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="EXIT" />
+            android:text="ออกจากการสแกน" />
 
     </LinearLayout>
 

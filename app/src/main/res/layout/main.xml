@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg" >
+    android:background="@drawable/bg">
 
     <ImageView
 
@@ -22,24 +22,24 @@
         android:id="@+id/addActivity"
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/addactivity"
-        android:onClick="addAc"/>
+        android:background="@drawable/button_selector"
+        android:onClick="addAc" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/viewallactivity"
-        android:background="@drawable/viewactivity"
-        android:layout_below="@+id/viewCalendar"
-        android:layout_alignLeft="@+id/viewCalendar" />
+        android:background="@drawable/button_select_viewac"
+        android:layout_below="@+id/addActivity"
+        android:layout_alignLeft="@+id/addActivity" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/viewCalendar"
-        android:background="@drawable/viewcarlendar"
-        android:layout_below="@+id/addActivity"
-        android:layout_alignLeft="@+id/addActivity" />
+        android:background="@drawable/viewcar_button"
+        android:layout_below="@+id/viewallactivity"
+        android:layout_alignLeft="@+id/viewallactivity" />
 
     <!--
         <ImageButton

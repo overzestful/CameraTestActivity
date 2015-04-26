@@ -3,7 +3,7 @@
     android:layout_width="300dip"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="10dip" >
+    android:padding="10dip">
 
     <TextView
         android:id="@+id/textBookNAME"
@@ -29,6 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ยืนยันรหัสผ่าน" />
+
     <TextView
         android:id="@+id/textBookHOUR"
         android:layout_width="wrap_content"
@@ -41,27 +42,28 @@
         android:layout_marginTop="10dip"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
+        android:orientation="horizontal">
+
         <Button
             android:id="@+id/buttonEnter"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="Scan" />
+            android:text="สแกน" />
 
         <Button
             android:id="@+id/buttonEdit"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="Edit" />
+            android:text="แก้ไข" />
+
         <Button
             android:id="@+id/buttonDelete"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="Delete" />
+            android:text="ลบ" />
 
 
         <Button
@@ -69,7 +71,7 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="Close" />
+            android:text="ปิด" />
     </LinearLayout>
 
 </LinearLayout>
