@@ -31,7 +31,9 @@
         android:id="@+id/viewallactivity"
         android:background="@drawable/button_select_viewac"
         android:layout_below="@+id/addActivity"
-        android:layout_alignLeft="@+id/addActivity" />
+        android:layout_alignLeft="@+id/addActivity"
+        android:onClick="viewAll"
+        />
 
     <ImageButton
         android:layout_width="wrap_content"

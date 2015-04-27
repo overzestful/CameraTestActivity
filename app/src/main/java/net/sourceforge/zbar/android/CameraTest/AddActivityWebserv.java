@@ -267,7 +267,7 @@ public class AddActivityWebserv extends Activity {
         }*/
 
 
-        String url = "http://172.19.192.26/register/saveADDData.php";
+        String url = "http://192.168.1.13/register/saveADDData.php";
 
        List<NameValuePair> params = new ArrayList<NameValuePair>();
         params.add(new BasicNameValuePair("sActivityName", txtActivityName.getText().toString()));

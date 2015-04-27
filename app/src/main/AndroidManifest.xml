@@ -38,6 +38,9 @@
             android:name=".ViewallActivity"
             android:label="@string/title_activity_viewall"></activity>
         <activity
+            android:name=".ListItemView"
+            android:label="@string/title_activity_viewall"></activity>
+        <activity
             android:name=".ViewCalendar"
             android:label="@string/title_activity_view_calendar"></activity>
         <activity
