@@ -41,7 +41,7 @@
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="10">
+        android:layout_weight="50">
 
         <ListView
             android:id="@+id/listView1"
@@ -65,7 +65,7 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="By.. ThaiCreate.Com" />
+            android:text="Qr Scanner Hr. Activity" />
 
     </LinearLayout>
 

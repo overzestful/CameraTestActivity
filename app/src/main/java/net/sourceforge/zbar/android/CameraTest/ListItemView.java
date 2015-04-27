@@ -78,7 +78,7 @@ public class ListItemView extends Activity {
          * {"CustomerID":"C004","Name":"Chalee Angel","Email":"chalee.angel@thaicreate.com" ,"CountryCode":"US","Budget":"4000000","Used":"100000"}]
          */
 
-        String url = "http://192.168.1.13/register/getJSON.php";
+        String url = "http://10.0.3.2/register/getJSON.php";
 
         // Paste Parameters
         List<NameValuePair> params = new ArrayList<NameValuePair>();
@@ -109,7 +109,7 @@ public class ListItemView extends Activity {
 
             SimpleAdapter sAdap;
             sAdap = new SimpleAdapter(ListItemView.this, MyArrList, R.layout.activity_column,
-                    new String[] {"ActivityName", "SpinnerType", "DateStart"}, new int[] {R.id.ColCustomerID, R.id.ColName, R.id.ColEmail});
+                    new String[] {"MemberID", "SpinnerType", "DateStart"}, new int[] {R.id.ColCustomerID, R.id.ColName, R.id.ColEmail});
             lisView1.setAdapter(sAdap);
 
             final AlertDialog.Builder viewDetail = new AlertDialog.Builder(this);
