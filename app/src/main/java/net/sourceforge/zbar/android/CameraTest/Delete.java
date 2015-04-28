@@ -1,18 +1,17 @@
 package net.sourceforge.zbar.android.CameraTest;
 
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.util.Log;
-import android.view.ContextMenu;
-import android.view.ContextMenu.ContextMenuInfo;
 import android.view.LayoutInflater;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
@@ -20,6 +19,7 @@ import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -46,16 +46,15 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class Listview extends Activity {
+public class Delete extends Activity {
 
     ArrayList<HashMap<String, String>> MyArrList;
-    String[] Cmd = {"สแกน QR-Code","ดูรายละเอียด","แก้ไขกิจกรรม","ลบกิจกรรม"};
 
     @SuppressLint("NewApi")
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_listviewww);
+        setContentView(R.layout.activity_delete);
 
         // Permission StrictMode
         if (android.os.Build.VERSION.SDK_INT > 9) {
@@ -97,15 +96,15 @@ public class Listview extends Activity {
          * {"MemberID":"3","Username":"surachai","Password":"surachai@3","Name":"Surachai Sirisart","Tel":"0876543210","Email":"surachai@thaicreate.com"}]
          */
 
-        String url = "http://10.0.3.2/register/showAllData.php";
+        String url = "http://10.0.3.2/delete/showAllData.php";
 
         // Paste Parameters
         List<NameValuePair> params = new ArrayList<NameValuePair>();
         params.add(new BasicNameValuePair("txtKeyword", strKeySearch.getText().toString()));
 
         try {
-            JSONArray data = new JSONArray(getJSONUrl(url,params));
 
+            JSONArray data = new JSONArray(getJSONUrl(url,params));
 
             MyArrList = new ArrayList<HashMap<String, String>>();
             HashMap<String, String> map;
@@ -129,96 +128,10 @@ public class Listview extends Activity {
 
             lisView1.setAdapter(new ImageAdapter(this));
 
-            registerForContextMenu(lisView1);
-
-
         } catch (JSONException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-    }
-
-    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo) {
-
-        menu.setHeaderIcon(android.R.drawable.btn_star_big_on);
-        menu.setHeaderTitle("Command");
-        String[] menuItems = Cmd;
-        for (int i = 0; i<menuItems.length; i++) {
-            menu.add(Menu.NONE, i, i, menuItems[i]);
-        }
-    }
-
-    @Override
-    public boolean onContextItemSelected(MenuItem item) {
-        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo)item.getMenuInfo();
-        int menuItemIndex = item.getItemId();
-        String[] menuItems = Cmd;
-        String CmdName = menuItems[menuItemIndex];
-
-        // Check Event Command
-        if ("สแกน QR-Code".equals(CmdName)) {
-            Toast.makeText(Listview.this, "สแกน QR-Code", Toast.LENGTH_LONG).show();
-            final String sMemberID = MyArrList.get(info.position).get("MemberID").toString();
-            String sActivityName = MyArrList.get(info.position).get("ActivityName").toString();
-            String sDateStart = MyArrList.get(info.position).get("DateStart").toString();
-
-
-
-            Intent newActivity = new Intent(Listview.this, LoginForQrCode.class);
-            newActivity.putExtra("MemberID", sMemberID);
-            startActivity(newActivity);
-        } else if ("ดูรายละเอียด".equals(CmdName)) {
-            Toast.makeText(Listview.this, "ดูรายละเอียด", Toast.LENGTH_LONG).show();
-
-            final String sMemberID = MyArrList.get(info.position).get("MemberID").toString();
-            String sActivityName = MyArrList.get(info.position).get("ActivityName").toString();
-            String sDateStart = MyArrList.get(info.position).get("DateStart").toString();
-
-
-
-            Intent newActivity = new Intent(Listview.this, DetailActivity.class);
-            newActivity.putExtra("MemberID", sMemberID);
-            startActivity(newActivity);
-        } else if ("แก้ไขกิจกรรม".equals(CmdName)) {
-            Toast.makeText(Listview.this, "Your Selected Update", Toast.LENGTH_LONG).show();
-
-         final String sMemberID = MyArrList.get(info.position).get("MemberID").toString();
-            String sActivityName = MyArrList.get(info.position).get("ActivityName").toString();
-            String sDateStart = MyArrList.get(info.position).get("DateStart").toString();
-
-
-
-            Intent newActivity = new Intent(Listview.this, LoginForUpdate.class);
-                    newActivity.putExtra("MemberID", sMemberID);
-                    startActivity(newActivity);
-
-
-
-
-
-
-
-
-        } else if ("ลบกิจกรรม".equals(CmdName)) {
-            Toast.makeText(Listview.this, "Your Selected Delete", Toast.LENGTH_LONG).show();
-            final String sMemberID = MyArrList.get(info.position).get("MemberID").toString();
-            String sActivityName = MyArrList.get(info.position).get("ActivityName").toString();
-            String sDateStart = MyArrList.get(info.position).get("DateStart").toString();
-
-
-
-            Intent newActivity = new Intent(Listview.this, Delete.class);
-            newActivity.putExtra("MemberID", sMemberID);
-            startActivity(newActivity);
-
-
-        } else if ("d".equals(CmdName)) {
-        Toast.makeText(Listview.this, "Your Selected Delete", Toast.LENGTH_LONG).show();
-        /**
-         * Call the mthod
-         */
-    }
-        return true;
     }
 
 
@@ -253,8 +166,77 @@ public class Listview extends Activity {
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
             if (convertView == null) {
-                convertView = inflater.inflate(R.layout.activity_column, null);
+                convertView = inflater.inflate(R.layout.activity_column_delete, null);
             }
+
+            // imgCmdDelete
+            ImageButton cmdDelete = (ImageButton) convertView.findViewById(R.id.btnDelete);
+            cmdDelete.setBackgroundColor(Color.TRANSPARENT);
+
+            final AlertDialog.Builder adb1 = new AlertDialog.Builder(Delete.this);
+            final AlertDialog.Builder adb2 = new AlertDialog.Builder(Delete.this);
+
+            cmdDelete.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Intent goFirst = new Intent(getApplicationContext(),
+                            LoginForDelete.class);
+                    startActivity(goFirst);
+                    adb1.setTitle("Delete?");
+                    adb1.setMessage("Are you sure delete [" + MyArrList.get(position).get("ActivityName") +"]");
+                    adb1.setNegativeButton("Cancel", null);
+                    adb1.setPositiveButton("Ok", new AlertDialog.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+
+
+
+
+
+
+
+
+                                // Request to Delete data.
+                                String url = "http://10.0.3.2/delete/deleteData.php";
+                                List<NameValuePair> params = new ArrayList<NameValuePair>();
+                                params.add(new BasicNameValuePair("sMemberID", MyArrList.get(position).get("MemberID")));
+
+                                String resultServer = getJSONUrl(url, params);
+
+                                /** Get result delete data from Server (Return the JSON Code)
+                                 * StatusID = ? [0=Failed,1=Complete]
+                                 * Error	= ?	[On case error return custom error message]
+                                 *
+                                 * Eg Login Failed = {"StatusID":"0","Error":"Cannot delete data!"}
+                                 * Eg Login Complete = {"StatusID":"1","Error":""}
+                                 */
+                                String strStatusID = "0";
+                                String strError = "Unknow Status";
+
+                                try {
+                                    JSONObject c = new JSONObject(resultServer);
+                                    strStatusID = c.getString("StatusID");
+                                    strError = c.getString("Error");
+                                } catch (JSONException e) {
+                                    // TODO Auto-generated catch block
+                                    e.printStackTrace();
+                                }
+
+                                // Prepare Delete
+                                if (strStatusID.equals("0")) {
+                                    // Dialog
+                                    adb2.setTitle("Error! ");
+                                    adb2.setIcon(android.R.drawable.btn_star_big_on);
+                                    adb2.setPositiveButton("Close", null);
+                                    adb2.setMessage(strError);
+                                    adb2.show();
+                                } else {
+                                    Toast.makeText(Delete.this, "Delete data successfully.", Toast.LENGTH_SHORT).show();
+                                    ShowData(); // reload data again
+                                }
+
+                        }});
+                    adb1.show();
+                }
+            });
 
             // ColMemberID
             TextView txtMemberID = (TextView) convertView.findViewById(R.id.ColMemberID);

@@ -67,6 +67,13 @@
         <activity
             android:name=".DetailActivity"
             android:label="@string/app_name"></activity>
+        <activity
+            android:name=".Delete"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name=".LoginForDelete"
+            android:label="@string/app_name"></activity>
+
 
 
     </application>
