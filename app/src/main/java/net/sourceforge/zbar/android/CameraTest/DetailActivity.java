@@ -54,7 +54,7 @@ public class DetailActivity extends Activity {
         // Perform action on click
         btnBack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent newActivity = new Intent(DetailActivity.this,LoginForUpdate.class);
+                Intent newActivity = new Intent(DetailActivity.this,Listview.class);
                 startActivity(newActivity);
             }
         });
