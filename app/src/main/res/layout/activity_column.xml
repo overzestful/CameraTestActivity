@@ -4,13 +4,12 @@
     android:layout_height="fill_parent" >
 
     <TextView
-        android:id="@+id/ColCustomerID"
+        android:id="@+id/ColMemberID"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_weight="0.2"
         android:text="CustomerID"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textSize="20dp" />
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
         android:id="@+id/ColName"
@@ -21,11 +20,11 @@
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
-        android:id="@+id/ColEmail"
+        android:id="@+id/ColTel"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="Email"
+        android:text="Tel"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
 </LinearLayout>

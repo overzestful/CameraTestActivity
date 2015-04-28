@@ -96,7 +96,7 @@ public class Main extends Activity {
     }
 
     public void viewAll(View v){
-        Intent intent = new Intent(Main.this, ListItemView.class);
+        Intent intent = new Intent(Main.this, Listview.class);
        // setContentView(R.layout.activity_viewall);
         startActivity(intent);
 

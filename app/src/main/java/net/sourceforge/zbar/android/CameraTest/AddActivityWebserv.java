@@ -221,7 +221,7 @@ public class AddActivityWebserv extends Activity {
         ad.setIcon(android.R.drawable.btn_star_big_on);
         ad.setPositiveButton("Close", null);
 
-        // Check Username
+        /*// Check Username
         if (txtActivityName.getText().length() == 0) {
             ad.setMessage("Please input [Username] ");
             ad.show();
@@ -234,14 +234,14 @@ public class AddActivityWebserv extends Activity {
             ad.show();
             txtPassword.requestFocus();
             return false;
-        }
-        // Check Password and Confirm Password (Match)
+        }*/
+        /*// Check Password and Confirm Password (Match)
         if (!txtPassword.getText().toString().equals(txtConPassword.getText().toString())) {
             ad.setMessage("Password and Confirm Password Not Match! ");
             ad.show();
             txtConPassword.requestFocus();
             return false;
-        }
+        }*/
         // Check Name
         if (txtActivityStaff.getText().length() == 0) {
             ad.setMessage("Please input [Name] ");

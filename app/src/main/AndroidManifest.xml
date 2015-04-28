@@ -38,7 +38,7 @@
             android:name=".ViewallActivity"
             android:label="@string/title_activity_viewall"></activity>
         <activity
-            android:name=".ListItemView"
+            android:name=".Listview"
             android:label="@string/title_activity_viewall"></activity>
         <activity
             android:name=".ViewCalendar"
@@ -55,6 +55,19 @@
         <activity
             android:name=".ShowData"
             android:label="@string/app_name"></activity>
+        <activity
+            android:name=".UpdateActivity"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name=".LoginForUpdate"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name=".LoginForQrCode"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name=".DetailActivity"
+            android:label="@string/app_name"></activity>
+
 
     </application>
 </manifest> 
